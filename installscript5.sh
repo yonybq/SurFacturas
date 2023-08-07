@@ -3,7 +3,7 @@
 HOST=${1:-'dominio'}
 #parametros opcionales
 PROYECT=${2:-'https://github.com/yonybq/SurFacturas.git'}
-REMOTE='git@gitlab.com:'$(echo $PROYECT | sed -e s#^https://gitlab.com/##)
+REMOTE='git@github.com:'$(echo $PROYECT | sed -e s#^https://github.com/##)
 SERVICE_NUMBER=${3:-'1'}
 PATH_INSTALL=$(echo $HOME)
 DIR=$(echo $PROYECT | rev | cut -d'/' -f1 | rev | cut -d '.' -f1)$SERVICE_NUMBER
