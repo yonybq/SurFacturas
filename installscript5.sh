@@ -2,7 +2,7 @@
 
 HOST=${1:-'dominio'}
 #parametros opcionales
-PROYECT=${2:-'https://gitlab.com/facturaperu/facturadorpro5.git'}
+PROYECT=${2:-'https://github.com/yonybq/SurFacturas.git'}
 REMOTE='git@gitlab.com:'$(echo $PROYECT | sed -e s#^https://gitlab.com/##)
 SERVICE_NUMBER=${3:-'1'}
 PATH_INSTALL=$(echo $HOME)
@@ -13,7 +13,7 @@ MYSQL_PASSWORD=${6:-$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 20 ; echo '
 MYSQL_DATABASE=${7:-$DIR}
 MYSQL_ROOT_PASSWORD=${8:-$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 20 ; echo '')}
 ADMIN_PASSWORD=${9:-$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 10 ; echo '')}
-EMAIL=${10:-'frank921713@hotmail.com'}
+EMAIL=${10:-'rohelbq@gmail.com'}
 
 if [ "$HOST" = "dominio" ]; then
     echo no ha ingresado dominio, vuelva a ejecutar el script agregando un dominio como primer parametro
